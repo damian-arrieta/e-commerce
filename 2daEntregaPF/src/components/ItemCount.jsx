@@ -18,11 +18,11 @@ export default function ItemCount({initial, stock, onAdd}) {
 
     return (
         <>
-            <button className="btn btn-dark" disabled={count <= 1} onClick={() => decrease()}>-</button>
+            <button className="btn btn-dark m-2" disabled={count <= 1} onClick={() => decrease()}>-</button>
             <span>{count}</span>
-            <button className="btn btn-dark" disabled={count >= stock} onClick={() => increase()}>+</button>
+            <button className="btn btn-dark m-2" disabled={count >= stock} onClick={() => increase()}>+</button>
             <div>
-                <button className="btn btn-dark" disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
+                <button className="btn btn-dark m-2" disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
             </div>
         </>
   )

@@ -1,6 +1,6 @@
-import Title from './Title';
-import ItemList from './ItemList';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import ItemDetail from './ItemDetail';
 
 const products = [
   {id: 1, image: 'https://deejaystore.com.ar/1119-large_default/pioneer-cdj-900-nexus.jpg', category:'reproductores', title: 'CDJ 3000'},
@@ -10,25 +10,26 @@ const products = [
   {id: 5, image: 'https://metrosoundmusic.com/wp-content/uploads/2013/09/Pioneer-RMX-1000-Remix-Station-Performance-DJ-Remixing-Module.png', category:'accesorios', title: 'RMX 1000'}
 ];
 
-export default function ItemListContainer() {
+export const ItemDetailContainer = () => {
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
+
+  const { detalleId } = useParams();
 
   useEffect(() => {
-    const getData = new Promise(resolve => {
-      setTimeout(() => {
-        resolve(products);
-      }, 2000);
-    });
+      const getData = new Promise(resolve => {
+        setTimeout(() => {
+          resolve(products)
+        }, 500);
+      });
 
-    getData.then(res => setData(res));
+      getData.then(res => setData(res.find(product => product.id === parseInt(detalleId))));
 
-  }, []);
+    }, []);
 
-  return (
-    <>
-        <Title greeting="Damián Arrieta E-commerce Pioneer" />
-        <ItemList data={data} />
-    </>
-  )
+return (
+  <ItemDetail data={data}/>
+);
 }
+
+export default ItemDetailContainer;
