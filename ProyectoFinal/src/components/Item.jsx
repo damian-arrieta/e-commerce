@@ -1,7 +1,9 @@
 import './item.css';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
 
 export const Item = ({info}) => {
+
   return (
     <>
           <div className="card-group text-center">
