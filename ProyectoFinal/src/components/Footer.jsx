@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
 
         <div className="text-center p-3">
-            © 2020 Damián Arrieta Proyecto Final React Coderhouse.
+            © 2023 Damián Arrieta Proyecto Final React Coderhouse.
         </div>
     </footer>
   )
