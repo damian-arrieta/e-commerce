@@ -3,6 +3,7 @@ import ItemList from './ItemList';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
+import Slider from './Slider'
 
 export const ItemListContainer = (props) => {
 
@@ -26,6 +27,7 @@ export const ItemListContainer = (props) => {
 
   return (
     <>
+      <Slider />
         <Title greeting={props.texto} />
         <ItemList data={data} />
     </>
