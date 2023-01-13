@@ -24,13 +24,3 @@ servidor en la nube.
 ## Demo
 
 https://proyecto-final-d66ccdqdq-damian-arrieta.vercel.app/
-
-
-## Screenshots
-
-
-![alt text](https://ibb.co/9V6Ng6f)
-![alt text](https://ibb.co/z2nsX9K)
-![alt text](https://ibb.co/4ZNBJGy)
-![alt text](https://ibb.co/Vpx01Rm)
-![alt text](https://ibb.co/mNz56gn)
