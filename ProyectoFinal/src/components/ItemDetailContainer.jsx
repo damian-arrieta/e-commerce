@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { Grid } from '@mui/material';
 
 export const ItemDetailContainer = () => {
 
@@ -17,7 +18,15 @@ export const ItemDetailContainer = () => {
     }, [detalleId]);
 
 return (
-  <ItemDetail data={data}/>
+  <>
+    <Grid
+        container
+        justifyContent='center'
+        padding="40px"
+    >
+        <ItemDetail data={data} />
+    </Grid>
+  </>
 );
 }
 

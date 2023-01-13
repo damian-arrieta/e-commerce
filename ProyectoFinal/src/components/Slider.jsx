@@ -9,7 +9,7 @@ export default function Slider() {
           className="d-block"
           src="https://www.pioneerdj.com/-/media/pioneerdj/images/products/player/cdj-3000/cdj-3000-video-thumbnail-1420x650-dt.jpg"
           alt="First slide"
-          style={{height: '30%', width: '100%'}}
+          style={{height: '650px', width: '100%'}}
         />
         <Carousel.Caption>
           <h3>CDJ 3000</h3>

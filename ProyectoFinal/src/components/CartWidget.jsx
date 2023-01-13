@@ -1,5 +1,8 @@
 import React from 'react';
 import { useCartContext } from '../context/CartContext';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Badge } from '@mui/material';
+import Button from '@mui/material/Button';
 
 export default function CartWidget() {
 
@@ -7,8 +10,11 @@ export default function CartWidget() {
 
   return (
     <>
-      <i className='bi bi-cart3'></i>
-      <span>{totalProducts() || ''}</span>
+      <Button variant="outline" color="inherit">
+        <Badge badgeContent={totalProducts()} color='info'>
+          <ShoppingCartOutlinedIcon />
+        </Badge>
+      </Button>
     </>
   )
 }

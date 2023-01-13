@@ -1,4 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
+import { Add, Remove } from '@mui/icons-material';
+import { Box, Grid } from '@mui/material';
+import Button from '@mui/material/Button';
 
 export default function ItemCount({initial, stock, onAdd}) {
 
@@ -18,12 +21,30 @@ export default function ItemCount({initial, stock, onAdd}) {
 
     return (
         <>
-            <button className="btn btn-dark m-2" disabled={count <= 1} onClick={() => decrease()}>-</button>
-            <span>{count}</span>
-            <button className="btn btn-dark m-2" disabled={count >= stock} onClick={() => increase()}>+</button>
-            <div>
-                <button className="btn btn-dark m-2" disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
-            </div>
+            <Grid container spacing={2} justifyContent="center" alignItems="center">
+                <Grid item>
+                    <Box sx={{
+                        border: '1px solid #D3D3D3',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        width: '200px'
+                    }}>
+                        <Button variant="text" color="inherit" onClick={decrease} disabled={count <= 1}>
+                            <Remove color='primary' />
+                        </Button>
+                        <span>{count}</span>
+                        <Button variant="text" color="inherit" onClick={increase} disabled={count >= stock}>
+                            <Add color='primary' />
+                        </Button>
+                    </Box>
+                </Grid>
+                <Grid item>
+                    <Button variant="outlined" color="primary" sx={{ width: '200px' }} disabled={stock <= 0} onClick={() => { onAdd(count); setCount(initial) }}>
+                        Agregar al Carrito
+                    </Button>
+                </Grid>
+            </Grid>
         </>
   )
 }

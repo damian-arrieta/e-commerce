@@ -1,4 +1,3 @@
-import Title from './Title';
 import ItemList from './ItemList';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -28,8 +27,7 @@ export const ItemListContainer = (props) => {
   return (
     <>
       <Slider />
-        <Title greeting={props.texto} />
-        <ItemList data={data} />
+      <ItemList data={data} />
     </>
   )
 }
