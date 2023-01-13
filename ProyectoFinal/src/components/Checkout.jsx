@@ -108,6 +108,7 @@ export default function Form() {
                 alignItems='center'
                 spacing={3}
                 padding={5}
+                sx={{height:"80vh"}}
             >
 
                 <Grid item>
@@ -138,6 +139,7 @@ export default function Form() {
         <Container>
             <Grid
                 container
+                sx={{height:"100vh"}}
             >
 
                 <Grid

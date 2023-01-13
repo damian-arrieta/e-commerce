@@ -43,7 +43,7 @@ export const ItemDetail = ({data}) => {
                   <Link to='/cart' style={{ textDecoration: "none" }}>
                     <Button variant="contained">Terminar compra</Button>
                   </Link> :
-                  <ItemCount initial={1} stock={data.quantity} onAdd={onAdd} />
+                  <ItemCount initial={1} stock={data.stock} onAdd={onAdd} />
               }
             </CardActions>
             <CardContent>

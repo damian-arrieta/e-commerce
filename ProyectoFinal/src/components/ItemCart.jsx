@@ -20,7 +20,7 @@ export default function ItemCart({ product }) {
         <Grid item>
             <CardMedia
                 component="img"
-                image={product.pictureUrl}
+                image={product.image}
                 height="200"
             />
         </Grid>

@@ -17,6 +17,7 @@ export default function Cart() {
           alignItems='center'
           padding='40px'
           spacing={5}
+          sx={{height:"100vh"}}
         >
 
           <Grid item>
@@ -43,7 +44,7 @@ export default function Cart() {
         justifyContent="center"
         spacing={5}
         padding="40px"
-        sx={{ overflow: "auto" }}
+        sx={{ overflow: "auto", height:"100vh" }}
       >
 
         <Grid item>
