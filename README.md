@@ -1,6 +1,6 @@
 # Proyecto Final React Comisión 41100
 
-EL objetivo de este proyecto era realizar el front end de una tienda online con carrito de
+El objetivo de este proyecto era realizar el front end de una tienda online con carrito de
 compras utilizando los componentes React y Firebase como
 servidor en la nube.
 
@@ -23,4 +23,4 @@ servidor en la nube.
 
 ## Demo
 
-https://proyecto-final-five-sepia.vercel.app/
+https://e-commerce-sepia-chi.vercel.app/
